@@ -7,11 +7,7 @@
         public string PO_Nombre { get; set; }
         public bool PO_Precio { get; set; }
         public DateTime PO_Fecha { get; set; }
-
-
-
-
-
+       
 
     }
 }
