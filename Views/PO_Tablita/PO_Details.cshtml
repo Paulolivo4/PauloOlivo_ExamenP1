@@ -1,12 +1,11 @@
 ﻿@model PauloOlivo_ExamenP1.Models.PO_Tablita
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "PO_Details";
 }
 
-<h1>Delete</h1>
+<h1>Details</h1>
 
-<h3>Are you sure you want to delete this?</h3>
 <div>
     <h4>PO_Tablita</h4>
     <hr />
@@ -42,10 +41,8 @@
             @Html.DisplayFor(model => model.PO_Fecha)
         </dd>
     </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="PO_TablitaId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+</div>
+<div>
+    <a asp-action="PO_Edit" asp-route-id="@Model?.PO_TablitaId">PO_Edit</a> |
+    <a asp-action="PO_Index">Back to List</a>
 </div>

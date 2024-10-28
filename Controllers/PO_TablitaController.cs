@@ -20,13 +20,13 @@ namespace PauloOlivo_ExamenP1.Controllers
         }
 
         // GET: PO_Tablita
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> PO_Index()
         {
             return View(await _context.PO_Tablita.ToListAsync());
         }
 
         // GET: PO_Tablita/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> PO_Details(int? id)
         {
             if (id == null)
             {
@@ -44,7 +44,7 @@ namespace PauloOlivo_ExamenP1.Controllers
         }
 
         // GET: PO_Tablita/Create
-        public IActionResult Create()
+        public IActionResult PO_Create()
         {
             return View();
         }
@@ -54,19 +54,19 @@ namespace PauloOlivo_ExamenP1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PO_TablitaId,PO_Tabla,PO_Apellido,PO_Apellido2,PO_Precio,PO_Fecha")] PO_Tablita pO_Tablita)
+        public async Task<IActionResult> PO_Create([Bind("PO_TablitaId,PO_Tabla,PO_Apellido,PO_Apellido2,PO_Precio,PO_Fecha")] PO_Tablita pO_Tablita)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(pO_Tablita);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(PO_Index));
             }
             return View(pO_Tablita);
         }
 
         // GET: PO_Tablita/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> PO_Edit(int? id)
         {
             if (id == null)
             {
@@ -86,7 +86,7 @@ namespace PauloOlivo_ExamenP1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PO_TablitaId,PO_Tabla,PO_Apellido,PO_Apellido2,PO_Precio,PO_Fecha")] PO_Tablita pO_Tablita)
+        public async Task<IActionResult> PO_Edit(int id, [Bind("PO_TablitaId,PO_Tabla,PO_Apellido,PO_Apellido2,PO_Precio,PO_Fecha")] PO_Tablita pO_Tablita)
         {
             if (id != pO_Tablita.PO_TablitaId)
             {
@@ -111,13 +111,13 @@ namespace PauloOlivo_ExamenP1.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(PO_Index));
             }
             return View(pO_Tablita);
         }
 
         // GET: PO_Tablita/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> PO_Delete(int? id)
         {
             if (id == null)
             {
@@ -135,7 +135,7 @@ namespace PauloOlivo_ExamenP1.Controllers
         }
 
         // POST: PO_Tablita/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("PO_Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
@@ -146,7 +146,7 @@ namespace PauloOlivo_ExamenP1.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(PO_Index));
         }
 
         private bool PO_TablitaExists(int id)
