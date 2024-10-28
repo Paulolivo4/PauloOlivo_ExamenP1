@@ -11,9 +11,11 @@ namespace PauloOlivo_ExamenP1.Models
         public string? PO_Apellido { get; set; }
         [StringLength(50, MinimumLength = 3)]
         public string? PO_Apellido2 { get; set; }
-        
+        [Required]
+
         public bool PO_Precio { get; set; }
-        
+        [Required]
+
         public DateTime PO_Fecha { get; set; }
        
 
