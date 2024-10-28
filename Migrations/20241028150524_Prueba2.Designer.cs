@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PauloOlivo_ExamenP1.Data;
 
@@ -11,9 +12,11 @@ using PauloOlivo_ExamenP1.Data;
 namespace PauloOlivo_ExamenP1.Migrations
 {
     [DbContext(typeof(PauloOlivo_ExamenP1Context))]
-    partial class PauloOlivo_ExamenP1ContextModelSnapshot : ModelSnapshot
+    [Migration("20241028150524_Prueba2")]
+    partial class Prueba2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

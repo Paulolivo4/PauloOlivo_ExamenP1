@@ -54,7 +54,7 @@ namespace PauloOlivo_ExamenP1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PO_TablitaId,PO_Tabla,PO_Nombre,PO_Apellido,PO_Precio,PO_Fecha")] PO_Tablita pO_Tablita)
+        public async Task<IActionResult> Create([Bind("PO_TablitaId,PO_Tabla,PO_Apellido,PO_Apellido2,PO_Precio,PO_Fecha")] PO_Tablita pO_Tablita)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace PauloOlivo_ExamenP1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PO_TablitaId,PO_Tabla,PO_Nombre,PO_Apellido,PO_Precio,PO_Fecha")] PO_Tablita pO_Tablita)
+        public async Task<IActionResult> Edit(int id, [Bind("PO_TablitaId,PO_Tabla,PO_Apellido,PO_Apellido2,PO_Precio,PO_Fecha")] PO_Tablita pO_Tablita)
         {
             if (id != pO_Tablita.PO_TablitaId)
             {
